@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="DiceGamePrac.GamePage"
+             Title="Dice Game">
+
+        <VerticalStackLayout Padding="20"
+                             Spacing="15">
+
+                <!-- Player Section -->
+                <HorizontalStackLayout Spacing="20">
+
+                        <!-- Player 1 -->
+                        <Frame BackgroundColor="#F5B7B1"
+                               Padding="10"
+                               WidthRequest="150">
+                                <VerticalStackLayout>
+                                        <Label x:Name="Player1Name"
+                                               Text="Player 1"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"/>
+                                        <Label Text="score"
+                                               HorizontalOptions="Center"
+                                               TextColor="Blue"/>
+                                        <Label x:Name="Player1ScoreLabel"
+                                               Text="0"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"/>
+                                        <Button x:Name="Player1RollButton"
+                                                Text="ROLL DICE"
+                                                Clicked="OnPlayer1Roll"/>
+                                </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- Player 2 -->
+                        <Frame BackgroundColor="#F5B7B1"
+                               Padding="10"
+                               WidthRequest="150">
+                                <VerticalStackLayout>
+                                        <Label x:Name="Player2Name"
+                                               Text="Player 2"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"/>
+                                        <Label Text="score"
+                                               HorizontalOptions="Center"
+                                               TextColor="Blue"/>
+                                        <Label x:Name="Player2ScoreLabel"
+                                               Text="0"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"/>
+                                        <Button x:Name="Player2RollButton"
+                                                Text="ROLL DICE"
+                                                IsEnabled="False"
+                                                Clicked="OnPlayer2Roll"/>
+                                </VerticalStackLayout>
+                        </Frame>
+                </HorizontalStackLayout>
+
+                <!-- Dice Image -->
+                <Frame BackgroundColor="LightBlue"
+                       Padding="20"
+                       HeightRequest="200"
+                       WidthRequest="200"
+                       HorizontalOptions="Center">
+                        <Image x:Name="DiceImage"
+                               HeightRequest="150"
+                               WidthRequest="150"
+                               Aspect="AspectFit"/>
+                </Frame>
+
+                <!-- Reset Button -->
+                <Button Text="RESET SCORE"
+                        BackgroundColor="HotPink"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Clicked="OnResetClicked"/>
+
+        </VerticalStackLayout>
+</ContentPage>
