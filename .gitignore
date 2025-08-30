@@ -1,0 +1,30 @@
+# Build folders
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vs/
+
+# Visual Studio / Rider caches
+.vscode/
+.idea/
+*.swp
+
+# MAUI specific
+*.db
+*.apk
+*.aab
+*.app
+*.ipa
+
+# OS cruft
+.DS_Store
+Thumbs.db
